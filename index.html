@@ -2,8 +2,89 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>To DO List</title>
+    <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <img src="images/to-do-list.png" id="todolist" alt="todolist" />
+      <div id="shadow"></div>
+    </div>
+
+    <div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+
+    <header>
+      <h1 class="heading">To Do List</h1>
+    </header>
+
+    <main>
+      <section id="todo">
+        <details>
+          <h2 class="hidden">To-DOs</h2>
+          <summary class="list-heading">To-Dos</summary>
+          <ul class="todo">
+            <li><input type="checkbox" class="checkbox" /> Design for Eric</li>
+
+            <li><input type="checkbox" class="checkbox" /> Project Images</li>
+            <li><input type="checkbox" class="checkbox" /> Groceries</li>
+            <li>
+              <input type="checkbox" class="checkbox" /> Art Store - Supplies
+            </li>
+            <li><input type="checkbox" class="checkbox" /> Quiz</li>
+          </ul>
+        </details>
+      </section>
+
+      <section id="inprogress">
+        <details>
+          <h2 class="hidden">In Progress</h2>
+          <summary class="list-heading">In Progress</summary>
+          <ul class="inprogress">
+            <li><input type="checkbox" class="checkbox" /> Final Project</li>
+            <li><input type="checkbox" class="checkbox" /> Room Renovations</li>
+            <li><input type="checkbox" class="checkbox" /> Research for VC</li>
+            <li>
+              <input type="checkbox" class="checkbox" /> Watercolor Painting
+            </li>
+            <li>
+              <input type="checkbox" class="checkbox" /> Wireframes for Jarrod
+            </li>
+          </ul>
+        </details>
+      </section>
+
+      <section id="done">
+        <details>
+          <h2 class="hidden">Done</h2>
+          <summary class="list-heading">Done</summary>
+          <ul class="done">
+            <li>
+              <input type="checkbox" class="checkbox" checked="checked" /> MMA
+              Homework
+            </li>
+            <li>
+              <input type="checkbox" class="checkbox" checked="checked" />
+              Design for James
+            </li>
+            <li>
+              <input type="checkbox" class="checkbox" checked="checked" />
+              Drivetest
+            </li>
+            <li>
+              <input type="checkbox" class="checkbox" checked="checked" /> Writ
+              Quiz
+            </li>
+            <li>
+              <input type="checkbox" class="checkbox" checked="checked" />
+              Laundry
+            </li>
+          </ul>
+        </details>
+      </section>
+    </main>
+  </body>
 </html>
