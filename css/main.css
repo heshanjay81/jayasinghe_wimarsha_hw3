@@ -1,0 +1,187 @@
+body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+header > h1 {
+  text-align: center;
+  padding: 10px;
+}
+
+/* applies to all sections */
+.list-heading {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+section {
+  width: 400px;
+  border: 4px solid gray;
+  border-radius: 8px;
+  margin: 10px 12px;
+}
+
+section > h2 {
+  color: gray;
+  padding: 4px 8px;
+}
+
+section:first-of-type {
+  border: 4px solid gray;
+}
+
+/* id has a higher specificity, so it beat the selector */
+#inprogress {
+  border: 4px solid gray;
+}
+
+#inprogress h2 {
+  color: gray;
+}
+
+#done {
+  border: 4px solid gray;
+}
+
+#done h2 {
+  color: gray;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  padding: 6px 8px;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.todo li:nth-child(odd) {
+  background-color: rgba(255, 234, 0, 0.27);
+}
+
+.inprogress li:nth-child(odd) {
+  background-color: rgba(255, 234, 0, 0.27);
+  size: 200px;
+}
+
+.done li:nth-child(odd) {
+  background-color: rgba(255, 234, 0, 0.27);
+}
+
+/* floating icon */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+#todolist {
+  width: 100px;
+  animation: float 3s ease-out infinite;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+#shadow {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  animation: shrink 3s ease-out infinite;
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(0.8, 0.2);
+  }
+  50% {
+    transform: scale(0.5, 0.1);
+  }
+  100% {
+    transform: scale(0.8, 0.2);
+  }
+}
+
+/* checkbox xstyle */
+
+.checkbox {
+  accent-color: yellow;
+}
+
+/* waves */
+.wave {
+  background: rgba(255, 234, 0, 0.27);
+  border-radius: 100% 100% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 7em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 20s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -3s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+    transform: translateX(1);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(1);
+  }
+}
+
+/* emojie at the end of the text */
+
+input [type="checkbox"]:checked + span:after {
+  content: "👻";
+}
